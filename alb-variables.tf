@@ -1,27 +1,28 @@
 #ALB VARIABLES
 
 variable "region" {
-  default = ""
+  default = "us-east-2"
 }
 
 variable "alb-name" {
-  default = ""
+  default = "alb"
 }
 
 variable "internal" {
-  default = ""
+  default = "alb"
 }
 
 variable "alb-sg" {
-  default = ""
+  default = "sg-0244e3f85210cc582"
 }
 
 variable "alb-subnets" {
   type = "list"
+  default = ["subnet-bff76bd4","subnet-15e22868"]
 }
 
 variable "alb-tag" {
-  default = ""
+  default = "alb1"
 }
 
 
@@ -31,25 +32,21 @@ variable "alb-tag" {
 #TARGET GROUPS
 
 variable "tg-name" {
-  default = ""
+  default = "terraform"
 }
 
 variable "port" {
-  default = ""
+  default = "80"
 }
 
 variable "protocol" {
-  default = ""
+  default = "http"
 }
 
 variable "vpc-id" {
-  default = ""
+  default = "vpc-6014600b"
 }
 
 variable "no-of-frontend-attachments" {
   type = "list"
-}
-
-variable "certificate-arn" {
-  default = ""
 }
